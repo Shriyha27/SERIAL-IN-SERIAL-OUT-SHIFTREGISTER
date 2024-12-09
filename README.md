@@ -27,16 +27,42 @@ Each D flip-flop in the circuit has a Data (D) input, a Clock (CLK) input, and a
 
 /* write all the steps invloved */
 
+1.Open quartus II and create New project wizard.
+2. Write the program in Verilog HDL file and run the program.
+3. Download the RTL viewer 
+4. Now open university program VWF and download waveform after the execution.
+
 **PROGRAM**
 
 /* Program for flipflops and verify its truth table in quartus using Verilog programming.
 
-Developed by: RegisterNumber:
+module exp_10(q,clk,sin);
+input clk;
+input sin;
+output [3:0] q;
+reg [3:0] q;
+alwats @(posedge clk)
+begin 
+q[0] <= sin;
+q[1] <= q[0];
+q[2] <= q[1];
+q[3] <= q[2];
+end
+endmodule
 
-*/
+Developed by: V.Shriyha
+RegisterNumber: 24007606
 
 **RTL LOGIC FOR SISO Shift Register**
 
+![WhatsApp Image 2024-12-09 at 13 26 56_8265f873](https://github.com/user-attachments/assets/fcdd2bd6-0e58-4382-8600-de1fbeb8dbd5)
+
+
 **TIMING DIGRAMS FOR SISO Shift Register**
 
+![WhatsApp Image 2024-12-09 at 13 27 20_0f1e26a1](https://github.com/user-attachments/assets/bbf57b33-5dcb-4ab5-a5fb-c259d87d97fb)
+
+
 **RESULTS**
+
+Thus the SISO Shift Register is executed in Verilog HDL file and its truth table is verified.
